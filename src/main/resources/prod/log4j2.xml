@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="60">
+    <Properties>
+        <Property name="PATTERN">%d %p [%t] %C{1} (%F:%L) [%marker] - %m%n</Property>
+        <Property name="LOG_DIR">./logs/</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${PATTERN}" />
+        </Console>
+
+        <RollingRandomAccessFile name="ErrorAppender" fileName="${LOG_DIR}/error.log" filePattern="${LOG_DIR}/error-%d{yyyy-MM-dd}.log.gz">
+            <ThresholdFilter level="error" onMatch="ACCEPT" OnMismatch="DENY"/>
+            <PatternLayout pattern="${PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="InfoAppender" fileName="${LOG_DIR}/info.log" filePattern="${LOG_DIR}/info-%d{yyyy-MM-dd}.log.gz">
+            <ThresholdFilter level="info" onMatch="ACCEPT" OnMismatch="DENY"/>
+            <PatternLayout pattern="${PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+    </Appenders>
+    <Loggers>
+        <Root level="info" includeLocation="true">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="InfoAppender"/>
+            <AppenderRef ref="ErrorAppender"/>
+        </Root>
+
+        <Logger name="ErrorLogger" level="error" additivity="false" includeLocation="true">
+            <AppenderRef ref="ErrorAppender"/>
+        </Logger>
+
+        <Logger name="InfoLogger" level="info" additivity="false" includeLocation="true">
+            <AppenderRef ref="InfoAppender"/>
+        </Logger>
+
+        <Logger name="JobLogger" level="info" additivity="false" includeLocation="true">
+            <AppenderRef ref="JobAppender"/>
+        </Logger>
+
+        <Logger name="AccessLogger" level="info" additivity="false" includeLocation="true">
+            <AppenderRef ref="AccessAppender"/>
+        </Logger>
+
+        <Logger name="org.springframework" level="info" additivity="false" includeLocation="true">
+            <AppenderRef ref="InfoAppender"/>
+        </Logger>
+
+
+        <!--<logger name="log4j.logger.org.mybatis" level="debug" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="log4j.logger.java.sql" level="debug" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="log4j.logger.java.sql.Connection" level="debug" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+
+    </Loggers>
+</Configuration>
