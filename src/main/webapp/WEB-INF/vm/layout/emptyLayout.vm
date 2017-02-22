@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    #parse("/common/header.vm")
+<body>
+
+<div id="wrapper" class="no-border">
+    <!-- Navigation -->
+    <div id="page-wrapper">
+        $screen_content
+
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<div class="bs-docs-section">
+  <h1 id="collapse" class="page-header">Collapse <small>collapse.js</small></h1>
+
+  <p class="lead">Flexible plugin that utilizes a handful of classes for easy toggle behavior.</p>
+
+  <div class="bs-callout bs-callout-danger" id="callout-collapse-dependency">
+    <h4>Plugin dependency</h4>
+    <p>Collapse requires the <a href="#transitions">transitions plugin</a> to be included in your version of Bootstrap.</p>
+  </div>
+
+  <h2 id="collapse-example">Example</h2>
+  <p>Click the buttons below to show and hide another element via class changes:</p>
+  <ul>
+    <li><name>.collapse</name> hides content</li>
+    <li><name>.collapsing</name> is applied during transitions</li>
+    <li><name>.collapse.in</name> shows content</li>
+  </ul>
+  <p>You can use a link with the <name>href</name> attribute, or a button with the <name>data-target</name> attribute. In both cases, the <name>data-toggle="collapse"</name> is required.</p>
+
+  <div class="bs-example">
+    <p>
+      <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Link with href
+      </a>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Button with data-target
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="well">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
+{% highlight html %}
+<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Link with href
+</a>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Button with data-target
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+    ...
+  </div>
+</div>
+{% endhighlight %}
+
+  <h2 id="collapse-example-accordion">Accordion example</h2>
+  <p>Extend the default collapse behavior to create an accordion with the panel component.</p>
+
+  <div class="bs-example" data-example-id="collapse-accordion">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Collapsible Group Item #1
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Collapsible Group Item #2
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Collapsible Group Item #3
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /example -->
+{% highlight html %}
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+  <p>It's also possible to swap out <name>.panel-body</name>s with <name>.list-group</name>s.</p>
+
+  <div class="panel-group" role="tablist">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="false" aria-controls="collapseListGroup1">
+            Collapsible list group
+          </a>
+        </h4>
+      </div>
+      <div id="collapseListGroup1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+        <ul class="list-group">
+          <li class="list-group-item">Bootply</li>
+          <li class="list-group-item">One itmus ac facilin</li>
+          <li class="list-group-item">Second eros</li>
+        </ul>
+        <div class="panel-footer">Footer</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bs-callout bs-callout-warning" id="callout-collapse-accessibility">
+    <h4>Make expand/collapse controls accessible</h4>
+    <p>Be sure to add <name>aria-expanded</name> to the control element. This attribute explicitly defines the current state of the collapsible element to screen readers and similar assistive technologies. If the collapsible element is closed by default, it should have a value of <name>aria-expanded="false"</name>. If you've set the collapsible element to be open by default using the <name>in</name> class, set <name>aria-expanded="true"</name> on the control instead. The plugin will automatically toggle this attribute based on whether or not the collapsible element has been opened or closed.</p>
+    <p>Additionally, if your control element is targetting a single collapsible element – i.e. the <name>data-target</name> attribute is pointing to an <name>id</name> selector – you may add an additional <name>aria-controls</name> attribute to the control element, containing the <name>id</name> of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.</p>
+  </div>
+
+  <h2 id="collapse-usage">Usage</h2>
+  <p>The collapse plugin utilizes a few classes to handle the heavy lifting:</p>
+  <ul>
+    <li><name>.collapse</name> hides the content</li>
+    <li><name>.collapse.in</name> shows the content</li>
+    <li><name>.collapsing</name> is added when the transition starts, and removed when it finishes</li>
+  </ul>
+  <p>These classes can be found in <name>component-animations.less</name>.</p>
+
+  <h3>Via data attributes</h3>
+  <p>Just add <name>data-toggle="collapse"</name> and a <name>data-target</name> to the element to automatically assign control of a collapsible element. The <name>data-target</name> attribute accepts a CSS selector to apply the collapse to. Be sure to add the class <name>collapse</name> to the collapsible element. If you'd like it to default open, add the additional class <name>in</name>.</p>
+  <p>To add accordion-like group management to a collapsible control, add the data attribute <name>data-parent="#selector"</name>. Refer to the demo to see this in action.</p>
+
+  <h3>Via JavaScript</h3>
+  <p>Enable manually with:</p>
+{% highlight js %}
+$('.collapse').collapse()
+{% endhighlight %}
+
+  <h3 id="collapse-options">Options</h3>
+  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <name>data-</name>, as in <name>data-parent=""</name>.</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped js-options-table">
+      <thead>
+       <tr>
+         <th>Name</th>
+         <th>type</th>
+         <th>default</th>
+         <th>description</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+         <td>parent</td>
+         <td>selector</td>
+         <td>false</td>
+         <td>If a selector is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the <name>panel</name> class)</td>
+       </tr>
+       <tr>
+         <td>toggle</td>
+         <td>boolean</td>
+         <td>true</td>
+         <td>Toggles the collapsible element on invocation</td>
+       </tr>
+      </tbody>
+    </table>
+  </div><!-- /.table-responsive -->
+
+  <h3 id="collapse-methods">Methods</h3>
+
+  <h4><name>.collapse(options)</name></h4>
+  <p>Activates your content as a collapsible element. Accepts an optional options <name>object</name>.</p>
+{% highlight js %}
+$('#myCollapsible').collapse({
+  toggle: false
+})
+{% endhighlight %}
+
+  <h4><name>.collapse('toggle')</name></h4>
+  <p>Toggles a collapsible element to shown or hidden.</p>
+
+  <h4><name>.collapse('show')</name></h4>
+  <p>Shows a collapsible element.</p>
+
+  <h4><name>.collapse('hide')</name></h4>
+  <p>Hides a collapsible element.</p>
+
+  <h3 id="collapse-events">Events</h3>
+  <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped bs-events-table">
+      <thead>
+       <tr>
+         <th>Event Type</th>
+         <th>Description</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+         <td>show.bs.collapse</td>
+         <td>This event fires immediately when the <name>show</name> instance method is called.</td>
+       </tr>
+       <tr>
+         <td>shown.bs.collapse</td>
+         <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
+       </tr>
+       <tr>
+         <td>hide.bs.collapse</td>
+         <td>
+          This event is fired immediately when the <name>hide</name> method has been called.
+         </td>
+       </tr>
+       <tr>
+         <td>hidden.bs.collapse</td>
+         <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
+       </tr>
+      </tbody>
+    </table>
+  </div><!-- /.table-responsive -->
+{% highlight js %}
+$('#myCollapsible').on('hidden.bs.collapse', function () {
+  // do something…
+})
+{% endhighlight %}
+</div>

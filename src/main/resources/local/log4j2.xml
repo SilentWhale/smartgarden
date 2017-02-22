@@ -41,13 +41,13 @@
             <AppenderRef ref="InfoAppender"/>
         </Logger>
 
-        <Logger name="JobLogger" level="info" additivity="false" includeLocation="true">
-            <AppenderRef ref="JobAppender"/>
-        </Logger>
+        <!--<Logger name="JobLogger" level="info" additivity="false" includeLocation="true">-->
+            <!--<AppenderRef ref="JobAppender"/>-->
+        <!--</Logger>-->
 
-        <Logger name="AccessLogger" level="info" additivity="false" includeLocation="true">
-            <AppenderRef ref="AccessAppender"/>
-        </Logger>
+        <!--<Logger name="AccessLogger" level="info" additivity="false" includeLocation="true">-->
+            <!--<AppenderRef ref="AccessAppender"/>-->
+        <!--</Logger>-->
 
         <Logger name="org.springframework" level="info" additivity="false" includeLocation="true">
             <AppenderRef ref="InfoAppender"/>

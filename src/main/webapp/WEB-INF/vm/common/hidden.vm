@@ -1,0 +1,11 @@
+<div class="header-title">
+    <button class="btn btn-info" type="submit" id="hiddenButton">Hidden</button>
+</div>
+
+<script>
+    $("#hiddenButton").on("click", function(){
+        $('#list-group-bar').offcanvas('toggle')
+//        $("#list-group-bar").hide();
+    });
+    console.log("hello");
+</script>

@@ -1,0 +1,85 @@
+
+<div class="list-group" id="list-group-bar">
+    <div class="panel-group" id="panel-group-1">
+##    订单查询
+    <ul>
+        <a href="/pos/datapanel"   class="list-group-item dropdown" >
+            <i class="glyphicon glyphicon-align-left"></i>
+            实时数据
+        </a>
+         <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h5 class="panel-title ">
+                        <a  data-toggle="collapse" data-parent="#panel-group-1 " href="#collapseOne">
+                            <i class="glyphicon glyphicon-star"></i>
+                            核心指标
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div  class="panel-body">
+                        <a href="/pos/index" class="list-group-item no-border">
+                            业务指标
+                        </a>
+                        <a href="/pos/weChatIndex" class="list-group-item no-border">
+                            微信
+                        </a>
+                        <a href="/pos/aliPayIndex" class="list-group-item no-border">
+                            支付宝
+                        </a>
+                        <a href="/pos/bankCardIndex" class="list-group-item no-border">
+                            银行卡
+                        </a>
+                    </div>
+                </div>
+         </div>
+        <a href="/pos/monitor" class="list-group-item dropdown" >
+            <i class="glyphicon glyphicon-eye-open"></i>
+            后端监控
+        </a>
+##        <a href="/pos/log" class="list-group-item ">
+##            <i class="glyphicon glyphicon-search"></i>
+##            日志搜索
+##        </a>
+##        <a href="/pos/logdata" class="list-group-item ">
+##            <i class="glyphicon glyphicon-calendar"></i>
+##            后台日志
+##        </a>
+##        <a href="/pos/clientLog" class="list-group-item ">
+##            <i class="glyphicon glyphicon-calendar"></i>
+##            终端日志
+##        </a>
+        <a href="/pos/errorstatis" class="list-group-item dropdown">
+            <i class="glyphicon glyphicon-stats"></i>
+            异常统计
+        </a>
+        <a href="/pos/device" class="list-group-item dropdown">
+            <i class="glyphicon glyphicon-record"></i>
+            设备监控</a>
+        <a href="/pos/data" class="list-group-item dropdown">
+            <i class="glyphicon glyphicon-indent-left"></i>
+            商家数据
+        </a>
+        <a href="/pos/config" class="list-group-item dropdown">
+            <i class="glyphicon glyphicon-cog"></i>
+            通道配置
+        </a>
+        <a href="/pos/mcc" class="list-group-item dropdown">
+            <i class="glyphicon glyphicon-cog"></i>
+            机房切换
+        </a>
+        <a href="/pos/duty" class="list-group-item dropdown">
+            <i class="glyphicon glyphicon-user"></i>
+            值班系统
+        </a>
+        <a href="/pos/refundrecord" class="list-group-item dropdown">
+            <i class="glyphicon glyphicon-list-alt"></i>
+            操作记录
+        </a>
+        <a href="/pos/versionUpdateTips" class="list-group-item dropdown">
+            <i class="glyphicon glyphicon-copyright-mark"></i>
+            版本设置
+        </a>
+    </ul>
+    </div>
+</div>

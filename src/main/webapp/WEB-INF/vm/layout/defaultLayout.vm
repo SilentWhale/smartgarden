@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+##<div id="wrapper">
+##    <!-- Navigation -->
+##    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+##        #parse("/common/navbar.vm")
+##        #parse("/common/menu.vm")
+##    </nav>
+##    <div id="page-wrapper">
+##        $screen_content
+##
+##    </div>
+##    #parse("/common/footer.vm")
+##    <!-- /#page-wrapper -->
+##</div>
+
+<div id="wrapper">
+    <div class="custom-nav">
+        #parse("/common/header.vm")
+    </div>
+    <div>
+        <div class="col-md-2">
+            #parse("/common/navbar.vm")
+        </div>
+        <div class="col-md-10">
+##            <div>
+##                #parse("/common/hidden.vm")
+##            </div>
+            <div>
+                $screen_content
+            </div>
+
+        </div>
+    </div>
+    <div>
+        #parse("/common/footer.vm")
+    </div>
+</div>
+
+<!-- /#wrapper -->
+
+</body>
+
+</html>

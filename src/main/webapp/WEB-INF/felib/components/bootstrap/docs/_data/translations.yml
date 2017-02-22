@@ -1,0 +1,49 @@
+- name: Chinese
+  name: zh
+  description: Bootstrap 中文文档
+  url: http://v3.bootcss.com/
+
+- name: Danish
+  name: da
+  description: Bootstrap på Dansk
+  url: http://getbootstrap.dk/
+
+- name: French
+  name: fr
+  description: Bootstrap en Français
+  url: http://www.oneskyapp.com/fr/docs/bootstrap/getting-started/
+
+- name: German
+  name: de
+  description: Bootstrap auf Deutsch
+  url: http://holdirbootstrap.de/
+
+- name: Italian
+  name: it
+  description: Bootstrap in Italiano
+  url: http://www.hackerstribe.com/guide/IT-bootstrap-3.1.1/
+
+- name: Korean
+  name: ko
+  description: Bootstrap 한국어
+  url: http://bootstrapk.com/
+
+- name: Russian
+  name: ru
+  description: Bootstrap по-русски
+  url: http://www.oneskyapp.com/ru/docs/bootstrap/
+
+- name: Spanish
+  name: es
+  description: Bootstrap en Español
+  url: http://www.oneskyapp.com/es/docs/bootstrap/
+
+- name: Ukrainian
+  name: uk
+  description: Bootstrap українською
+  url: http://twbs.docs.org.ua
+
+- name: Vietnamese
+  name: vi
+  description: Bootstrap bằng tiếng Việt
+  url: http://getbootstrap.com.vn

@@ -1,0 +1,4 @@
+#set($showborder = $request.getParameter('showborder'))
+#if($showborder && $showborder == 1)
+    #set($layout = "/layout/emptyLayout.vm")
+#end

@@ -1,0 +1,52 @@
+<div class="bs-docs-section">
+  <h1 id="name" class="page-header">Code</h1>
+
+  <h2 id="name-inline">Inline</h2>
+  <p>Wrap inline snippets of name with <name>&lt;name&gt;</name>.</p>
+<div class="bs-example" data-example-id="inline-name">
+  For example, <name>&lt;section&gt;</name> should be wrapped as inline.
+</div>
+{% highlight html %}
+For example, <name>&lt;section&gt;</name> should be wrapped as inline.
+{% endhighlight %}
+
+  <h2 id="name-user-input">User input</h2>
+  <p>Use the <name>&lt;kbd&gt;</name> to indicate input that is typically entered via keyboard.</p>
+<div class="bs-example" data-example-id="simple-kbd">
+  To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+  To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+</div>
+{% highlight html %}
+To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+{% endhighlight %}
+
+  <h2 id="name-block">Basic block</h2>
+  <p>Use <name>&lt;pre&gt;</name> for multiple lines of name. Be sure to escape any angle brackets in the name for proper rendering.</p>
+<div class="bs-example" data-example-id="simple-pre">
+  <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+</div>
+{% highlight html %}
+<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+{% endhighlight %}
+
+  <p>You may optionally add the <name>.pre-scrollable</name> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+  <h2 id="name-variables">Variables</h2>
+  <p>For indicating variables use the <name>&lt;var&gt;</name> tag.</p>
+  <div class="bs-example" data-example-id="simple-var">
+    <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+
+  </div>
+{% highlight html %}
+<var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+{% endhighlight %}
+
+  <h2 id="name-sample-output">Sample output</h2>
+  <p>For indicating blocks sample output from a program use the <name>&lt;samp&gt;</name> tag.</p>
+  <div class="bs-example" data-example-id="simple-samp">
+    <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+  </div>
+{% highlight html %}
+<samp>This text is meant to be treated as sample output from a computer program.</samp>
+{% endhighlight %}
+</div>

@@ -11,7 +11,7 @@
     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-    <context:component-scan base-package="com.sankuai.meituan" use-default-filters="false">
+    <context:component-scan base-package="com.liuying" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
@@ -19,7 +19,6 @@
 
     <mvc:annotation-driven>
         <mvc:message-converters>
-            <!--设置原因可以参考:http://wiki.sankuai.com/pages/viewpage.action?pageId=257283414-->
             <bean class="org.springframework.http.converter.StringHttpMessageConverter">
                 <constructor-arg name="defaultCharset" value="utf-8"/>
             </bean>
@@ -27,16 +26,46 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <mvc:interceptors>
-        <!-- 加入TraceHandlerInterceptor -->
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <!-- 想加入mtrace的url -->
-            <bean class="com.meituan.mtrace.http.TraceHandlerInterceptor">
-                <property name="appkey" value="${octoKey}"/>
-            </bean>
-        </mvc:interceptor>
-        <!-- 其它配置 -->
-    </mvc:interceptors>
+
+
+    <!--velocity 配置-->
+    <!--规定模板文件的类型和位置-->
+    <bean id="velocityConfigurer"
+          class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/WEB-INF/vm/" />
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--配置附加工具，以及将后缀为vm的文件交给下面的Resolver处理-->
+    <bean id="velocityLayoutViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+        <property name="cache" value="false"/>
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".vm"/>
+        <property name="layoutUrl" value="/layout/defaultLayout.vm"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="dateToolAttribute" value="dateTool"/>
+        <property name="toolboxConfigLocation" value="WEB-INF/vm/velocity-toolbox.xml" />
+        <property name="numberToolAttribute" value="numberTool"/>
+        <property name="order" value="1"/>
+    </bean>
+    <bean id="velocityLayoutView" class="org.springframework.web.servlet.view.velocity.VelocityLayoutView">
+        <property name="url" value="/layout/defaultLayout.vm"/>
+        <property name="layoutUrl" value="/layout/defaultLayout.vm"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="dateToolAttribute" value="dateTool"/>
+        <property name="numberToolAttribute" value="numberTool"/>
+    </bean>
+
+
+
 
 </beans>
