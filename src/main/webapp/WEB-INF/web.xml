@@ -50,6 +50,14 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>staticfile-servlet</servlet-name>-->
+        <!--<servlet-class>com.liuying.servlet.DefaultWrapperServlet</servlet-class>-->
+    <!--</servlet>-->
 
 
     <servlet-mapping>
@@ -82,9 +90,6 @@
         <url-pattern>*.gif</url-pattern>
     </servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>mvc-dispatcher</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
+
 
 </web-app>

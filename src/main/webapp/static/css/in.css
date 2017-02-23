@@ -11,6 +11,7 @@ body{
 	margin-top:100px;  /*与顶部距离100px*/
 	width:595px;
 	height:448px;
+	background:url(../pic/login.jpg) no-repeat center; /*设置背景图片，图片不重复*/
 	background-position:center center; /*背景位于窗口中间*/
 	/*background-color: red;*/
 }
@@ -19,6 +20,7 @@ body{
 	margin-top:100px;
 	width:595px;
 	height:448px;
+	background:url(../assets/pic/register.jpg) no-repeat center;
 	background-position:center center;
 	/*background-color: red;*/
 }
@@ -41,6 +43,7 @@ input{
 }
 #pic{
 	border:0;
+	background:url(../assets/pic/bg1.png);
 	width:33px;
 	height: 33px;
 	background-position:center center;
@@ -50,6 +53,7 @@ input{
 }
 #pic2{
 	border:0;
+	background:url(../assets/pic/bg2.png);
 	width:33px;
 	height: 33px;
 	background-position:center center;
@@ -59,6 +63,7 @@ input{
 }
 #pic3{
 	border:0;
+	background:url(../assets/pic/bt.jpg);
 	width:39px;
 	height: 25px;
 	background-position:center center;
