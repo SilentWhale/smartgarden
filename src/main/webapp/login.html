@@ -1,46 +1,52 @@
+<!DOCTYPE html >
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
-	<link type="text/css" rel="stylesheet" href="/static/css/in.css"/>
-	<title>Java Web</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" href="static/css/in.css"/>
+	<title>ç”¨æˆ·ç™»å½•ç•Œé¢</title>
+
 	<script language="javascript">
-function checkvalid2()
-{
-var strmg=login.uid.value;
-var pass=login.pwd.value;
-if(strmg=="" ||  pass=="")
-{
-alert("ÓÃ»§Ãû»òÃÜÂëÎª¿Õ,ÇëÊäÈëÓÃ»§ÃûºÍÃÜÂë...");
-//login.pwd.value=" ";
-return false;
-}
-else
-return true;
-}
-</script>
+        function checkvalid2()
+        {
+            var strmg=register.username.value;
+            var pass=register.password.value;
+            if(strmg=="" ||  pass=="")
+            {
+                alert("ç”¨æˆ·åæˆ–å¯†ç ä¸ºç©º,è¯·è¾“å…¥ç”¨æˆ·åå’Œå¯†ç ...");
+                return false;
+            }
+            else
+                return true;
+        }
+
+	</script>
 </head>
 
 <body>
-	<div class="one" >
-		
-		<form  name="login" action="login2.jsp" method="post" >
-
-			<div class="two" >
-				<div>
-					êÇ³Æ£º<input type="text"  name="uid"  id="input1"  placeholder="ÇëÊäÈëêÇ³Æ" autocomplete="off" 
-					  requird="required"/>
-				</div>
-
-				<div>
-					ÃÜÂë£º<input type="password" name="pwd" id="input2"  maxlength=8  oncopy="return false"  oncut="return false" onpaste="return false"  autocomplete="off"  placeholder="ÇëÊäÈëÃÜÂë" style="font-family:Wingdings;width:150" />
-				</div>
-
-				<div class="three">
-					<input id="pic" type="submit" value="" onClick="return checkvalid2()"/>
-					<input id="pic2" type="submit" value="" onClick="return checkvalid2()"/>
-				</div>
+<h1>æ™ºæ…§å›­æ—</h1>
+<div class="onee" >
+	<form name="register"  method="post" >
+		<div class="two" >
+			<div>
+				æ˜µç§°ï¼š<input type="text"  name="username"  id="username"  autocomplete="off" oncopy="return false"
+						  oncut="return false" onpaste="return false" placeholder="" />
 			</div>
-		</form>
-	</div>
+			<div>
+				å¯†ç ï¼š<input type="password" name="password" id="password"  autocomplete="off" oncopy="return false"
+						  oncut="return false" onpaste="return false"  maxlength=8  placeholder=""/>
+			</div>
+			<!--
+            <div class="four">
+                <input id="pic3" type="submit" value="" onClick="return checkvalid2()"/>
+            </div>
+            -->
+			<input type="submit" value="ç™»å½•" onClick="Wopen1()" style="margin-top:40px;width: 100px;height: 30px;background-color: #FFD700;border-style: hidden;border-radius: 6px;"/>
+			<input type="button" value="æ³¨å†Œ" onClick="Wopen2()" style="margin-top:40px;width: 100px;height: 30px;background-color: #FFD700;border-style: hidden;border-radius: 6px;"/>
+		</div>
+	</form>
+</div>
+
+
 </body>
 </html>
+

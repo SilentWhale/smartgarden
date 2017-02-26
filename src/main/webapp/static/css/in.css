@@ -8,19 +8,19 @@ body{
 }
 .one{
 	position:absolute; /*位置采用绝对定位*/
-	margin-top:100px;  /*与顶部距离100px*/
+	/*margin-top:100px;  /*与顶部距离100px*/
 	width:595px;
 	height:448px;
-	background:url(../pic/login.jpg) no-repeat center; /*设置背景图片，图片不重复*/
+	/*设置背景图片，图片不重复*/
 	background-position:center center; /*背景位于窗口中间*/
 	/*background-color: red;*/
 }
 .onee{
 	position:absolute;
-	margin-top:100px;
+	/*margin-top:100px;*/
 	width:595px;
-	height:448px;
-	background:url(../assets/pic/register.jpg) no-repeat center;
+	height:400px;
+	background:url(../assets/pic/login2.jpg) no-repeat center;
 	background-position:center center;
 	/*background-color: red;*/
 }
@@ -35,10 +35,10 @@ input{
 	background:#6BACCC;
 }
 .two{
-	margin-top:200px;
+	margin-top:125px;
 	margin-left:200px;
 	font-family:"楷体";
-	font-size:16px;
+	font-size:25px;
 	color:#0000FF;
 }
 #pic{
@@ -67,4 +67,10 @@ input{
 	width:39px;
 	height: 25px;
 	background-position:center center;
+}
+h1{
+	font-size: 500%;
+	font-style: italic;
+	font-family: STXingkai;
+	color:#FFF;
 }
