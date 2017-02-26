@@ -4,7 +4,7 @@ body{
 	width:595px;
 	height:448px;
 	text-align:center;   /*文字居中*/
-	background-color:#1B7FBB;  /*窗口背景颜色*/
+	/*background-color:#1B7FBB;  /*窗口背景颜色*/
 }
 .one{
 	position:absolute; /*位置采用绝对定位*/
@@ -12,7 +12,7 @@ body{
 	width:595px;
 	height:448px;
 	/*设置背景图片，图片不重复*/
-	background-position:center center; /*背景位于窗口中间*/
+	/*background-position:center center; /*背景位于窗口中间*/
 	/*background-color: red;*/
 }
 .onee{
