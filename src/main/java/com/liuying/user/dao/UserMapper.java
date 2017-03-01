@@ -11,6 +11,8 @@ import java.util.List;
 @Repository
 public interface UserMapper {
     int addUser(User user);
-    List<User> selectUser(User user);
+    List<User> selectUserByName(String name);
+    List<User> selectUserByPhoneNum(String phoneNumber);
+    List<User> selectUserByMail(String mail);
     int updateUser(User user);
 }
