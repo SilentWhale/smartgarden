@@ -36,15 +36,40 @@ return true;
 
 <form  name="register" action="register2.jsp" method="post" id="register">
 <h3 align="center"> 用户注册</h3>
-用&nbsp;户&nbsp;名：<Input type="text" name="username"  id="username" size="12" style="width:150" onChange="checkvalid2()">*<br>
-密&nbsp;&nbsp;&nbsp;码：<Input  id="pass1" type="password" name="password" maxlength=8 size="12" style="width:150" onChange="checkvalid()2"  >*<br>
-确&nbsp;认密码：<Input id="pass2" type="password" name="pwd2" maxlength=8 size="12" style="width:150" onChange="checkvalid2()" >*<br>
+用户名&nbsp;：<Input type="text" name="username"  id="username" size="12" style="width:150" onChange="checkvalid2()">*<br>
+密码&nbsp;&nbsp;：<Input  id="pass1" type="password" name="password" maxlength=8 size="12" style="width:150" onChange="checkvalid()2"  >*<br>
+确认密码：<Input id="pass2" type="password" name="pwd2" maxlength=8 size="12" style="width:150" onChange="checkvalid2()" >*<br>
+性别&nbsp;&nbsp;：
+
+  <label>
+    <input type="radio" name="userSex" value="male" id="SexRadioGroup_0">
+    男</label>
+
+  <label>
+    <input type="radio" name="userSex" value="female" id="SexRadioGroup_1">
+    女</label>
+  <br>
+  
+邮箱&nbsp;&nbsp;：<Input id="mail" type="text" name="userMail" maxlength=20 size="25" style="width:150" onChange="checkvalid2()"><br>
+电话&nbsp;&nbsp;：<Input id="phone" type="text" name="userPhone" maxlength=20 size="25" style="width:150" onChange="checkvalid2()"><br>
+年龄&nbsp;&nbsp;：<Input id="age" type="text" name="userAge" maxlength=8 size="12" style="width:150" onChange="checkvalid2()"><br>
+
+  
+  
+
 <!--<Input type="submit"  value="注册" onClick="return checkvalid2()"> -->
 
-<input id="checkSave" type="checkbox">是否保存密码<br>
-<Input type="submit"  value="注册" onClick="return checkvalid2()">
+
+
+
+
+<Input type="submit"  value="注册" onClick="return checkvalid2()">&nbsp;&nbsp;<Input type="reset"  value="重置">
 
 </form>
+
+
+</body>
+</html>
 </center>
 </body>
 </html>

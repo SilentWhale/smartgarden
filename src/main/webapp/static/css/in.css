@@ -5,6 +5,7 @@ body{
 	height:448px;
 	text-align:center;   /*文字居中*/
 	/*background-color:#1B7FBB;  /*窗口背景颜色*/
+	background-image:url(../assets/pic/back1.jpg);
 }
 .one{
 	position:absolute; /*位置采用绝对定位*/
