@@ -35,19 +35,25 @@ public class UserServiceImpl implements UserService {
         JsonRespVo<UserSigninJsonRespVo> jsonRespVoJsonRespVo = null ;
         try {
             List<User> selectedUser = findUser(reqVo);
-            if(selectedUser.size() != 1){
+            if(selectedUser.size() >= 2){
                 jsonRespVoJsonRespVo = buildFailJsonResp("该用户异常,请切换id登录");
                 LOGGER.error("more then two user with the same id in db:{}",JSON.toJSON(selectedUser));
+            } else if (selectedUser.size() == 0) {
+                jsonRespVoJsonRespVo = buildFailJsonResp("yo");
+                LOGGER.info("no user with the id in db:{}",JSON.toJSON(selectedUser));
             } else {
+                // TODO: 04/03/2017  进行密码校验 ,目前只进行用户名校验
                 jsonRespVoJsonRespVo = buildSuccessJsonResp();
                 LOGGER.info("signin resp:{}",JSON.toJSON(jsonRespVoJsonRespVo));
             }
             return jsonRespVoJsonRespVo;
         }catch (Exception e) {
             LOGGER.error("excepiton while user login:{}",JSON.toJSON(e));
-            return buildFailJsonResp("后台服务异常");
+            return buildExceptionJsonResp("后台服务异常");
         }
     }
+
+
 
     private JsonRespVo<UserSigninJsonRespVo> buildSuccessJsonResp() {
         JsonRespVo<UserSigninJsonRespVo> jsonResp = new JsonRespVo<UserSigninJsonRespVo>();
@@ -61,7 +67,17 @@ public class UserServiceImpl implements UserService {
 
     private JsonRespVo<UserSigninJsonRespVo> buildFailJsonResp(String errorMessage) {
         JsonRespVo<UserSigninJsonRespVo> jsonResp = new JsonRespVo<UserSigninJsonRespVo>();
-        jsonResp.setStatus(UserSigninJsonRespVo.ILLEGAL);
+        jsonResp.setStatus(JsonRespVo.SUCCESS);
+        UserSigninJsonRespVo userSigninJsonRespVo = new UserSigninJsonRespVo();
+        userSigninJsonRespVo.setIsLegal(UserSigninJsonRespVo.ILLEGAL);
+        userSigninJsonRespVo.setSignInMessage(errorMessage);
+        jsonResp.setData(userSigninJsonRespVo);
+        return jsonResp;
+
+    }
+    private JsonRespVo<UserSigninJsonRespVo> buildExceptionJsonResp(String errorMessage) {
+        JsonRespVo<UserSigninJsonRespVo> jsonResp = new JsonRespVo<UserSigninJsonRespVo>();
+        jsonResp.setStatus(JsonRespVo.FAIL);
         jsonResp.setError(new ErrorJsonResp(errorMessage));
         return jsonResp;
 

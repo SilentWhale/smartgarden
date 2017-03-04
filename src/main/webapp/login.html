@@ -27,11 +27,11 @@
     <form name="register"  method="post" >
         <div class="two" >
             <div>
-                昵称：<input type="text"  name="username"  id="username"  autocomplete="off" oncopy="return false"
+                邮箱：<input type="text"  id="signInKey"   autocomplete="off" oncopy="return false"
                           oncut="return false" onpaste="return false" placeholder="" />
             </div>
             <div>
-                密码：<input type="password" name="password" id="password"  autocomplete="off" oncopy="return false"
+                密码：<input type="password" id="signInPasswd"  autocomplete="off" oncopy="return false"
                           oncut="return false" onpaste="return false"  maxlength=8  placeholder=""/>
             </div>
 			<input type="submit" value="登录" id = "submitUserinfo" style="margin-top:40px;width: 100px;height: 30px;background-color: #FFD700;border-style: hidden;border-radius: 6px;"/>
@@ -43,5 +43,6 @@
 
 </body>
 
-<script src="static/js/login.js"/>
+<script type="text/javascript" src="static/components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="static/js/login.js"></script>
 </html>

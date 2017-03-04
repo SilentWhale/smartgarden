@@ -2,15 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.liuying.user.dao.UserMapper">
-    <select id="selectUserByName" resultMap="com.liuying.user.domain.User" parameterMap="String">
+    <select id="selectUserByName" resultType="com.liuying.user.domain.User">
        SELECT * FROM user where  userName =#{name};
     </select>
 
-    <select id="selectUserByPhoneNum" resultMap="com.liuying.user.domain.User" parameterMap="String">
+    <select id="selectUserByPhoneNum" resultType="com.liuying.user.domain.User">
        SELECT * FROM user where  userPhone =#{phoneNumber};
     </select>
 
-    <select id="selectUserByMail" resultMap="com.liuying.user.domain.User" parameterMap="String">
+    <select id="selectUserByMail" resultType="com.liuying.user.domain.User">
        SELECT * FROM user where  userMail=#{mail};
     </select>
 </mapper>

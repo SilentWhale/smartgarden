@@ -4,27 +4,40 @@ package com.liuying.user.domain;
  * Created by luo on 22/02/2017.
  */
 public class User {
+    private int userId;
     private String userName;
     private String userPassword;
-    private String userRight;
+    private int userRight;
     private String userSex;
     private String userMail;
     private String userPhone;
     private int userAge;
     private int userHis;
 
+    public User() {
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "userName='" + userName + '\'' +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
                 ", userPassword='" + userPassword + '\'' +
-                ", userRight='" + userRight + '\'' +
+                ", userRight=" + userRight +
                 ", userSex='" + userSex + '\'' +
                 ", userMail='" + userMail + '\'' +
                 ", userPhone='" + userPhone + '\'' +
                 ", userAge=" + userAge +
                 ", userHis=" + userHis +
                 '}';
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
@@ -43,11 +56,11 @@ public class User {
         this.userPassword = userPassword;
     }
 
-    public String getUserRight() {
+    public int getUserRight() {
         return userRight;
     }
 
-    public void setUserRight(String userRight) {
+    public void setUserRight(int userRight) {
         this.userRight = userRight;
     }
 
