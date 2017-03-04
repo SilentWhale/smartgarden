@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
                 jsonRespVoJsonRespVo = buildFailJsonResp("该用户异常,请切换id登录");
                 LOGGER.error("more then two user with the same id in db:{}",JSON.toJSON(selectedUser));
             } else if (selectedUser.size() == 0) {
-                jsonRespVoJsonRespVo = buildFailJsonResp("yo");
+                jsonRespVoJsonRespVo = buildFailJsonResp("用户不存在,请重新登录");
                 LOGGER.info("no user with the id in db:{}",JSON.toJSON(selectedUser));
             } else {
                 // TODO: 04/03/2017  进行密码校验 ,目前只进行用户名校验
