@@ -2,9 +2,7 @@ package com.liuying.user.constant;
 
 import org.springframework.util.StringUtils;
 
-/**
- * Created by luo on 27/02/2017.
- */
+
 public enum SignInKeyTypeEnum {
     NAME("username"),
     MAIL("mail"),
