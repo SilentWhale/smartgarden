@@ -5,6 +5,9 @@ package com.liuying.vo;
  * Created by luo on 27/02/2017.
  */
 public class JsonRespVo<T> {
+
+    public static final String SUCCESS = "success";
+    public static final String FAIL = "fail";
     private String status;
     private T data;
     private ErrorJsonResp error;
